@@ -1,18 +1,92 @@
 <!DOCTYPE HTML>
 <head>
     <title>My First Project</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        function openTab(tabId) {
+            var sections = document.getElementsByClassName("content");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(tabId).style.display = "block";
+        }
+
+        window.onload = function () {
+            openTab('profile');
+        }
+    </script>
 </head>
 <body>
     <link rel="stylesheet" href="https:s//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <header>
         <h1>Gaurav Jangid Protfolio</h1>
-        <a href="">My Profile</a>
-        <a href="">My Skills</a>
-        <a href="">About Me</a>
+        <nav>
+            <a href="#" onclick="openTab('profile')">My Profile</a>
+            <a href="#" onclick="openTab('skills')">My Skills</a>
+            <a href="#" onclick="openTab('about')">About Me</a>
+        </nav>
     </header>
-    <img src="" alt="Gaurav Jangid" style="width:200px;height:200px;">
+    <div id="profile" class="content">
+    <h2>My Profile</h2>
+    <p><b>Name:</b> Gaurav Jangid</p>
+    <p><b>Phone:</b> +91 [YOUR FULL NUMBER HERE]</p>
+    <p><b>Email:</b> [YOUR EMAIL HERE]</p>
+    <p>I am a motivated professional with experience in data analysis, software development, and business operations. I have worked at Capgemini and National Timber and hold a B.Tech in Computer Science.</p>
+</div>
+<div id="skills" class="content">
+    <h2>My Skills</h2>
+    <p>• Data Analysis</p>
+    <p>• SQL, Python, Excel</p>
+    <p>• Business Reporting</p>
+    <p>• Project Management</p>
+</div>
+<div id="about" class="content">
+    <h2>About Me</h2>
+    <p>I am passionate about solving problems using data and technology. I have completed certifications from IBM, Microsoft, and Google. My goal is to grow as a Business Analyst and contribute to impactful projects.</p>
+</div>
     <footer>
         <hr>
         <p>author: Gaurav Jangid</p>
@@ -26,3 +100,5 @@
     </footer>
 </body>
 </HTML>
+
+
